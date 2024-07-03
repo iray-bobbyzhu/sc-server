@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.26)
 
-project(main LANGUAGES CXX VERSION 1.0.0)
+project(server LANGUAGES CXX VERSION 1.0.0)
 
 find_package(Threads REQUIRED)
 
