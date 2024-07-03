@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
     struct can_frame raw_frame;
     while (SocketCan::DequeueIncoming(raw_frame))
     {
+        raw_frame.can_id &= CAN_EFF_MASK;
         std::cout << std::hex << std::setw(8) << std::setfill('0') << raw_frame.can_id;
         std::cout << " [" << (int)raw_frame.can_dlc << "] ";
 
